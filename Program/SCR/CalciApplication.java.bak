@@ -1,0 +1,70 @@
+import java.util.Scanner;
+class CalciApplication
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		boolean b=false;
+		while (!b)
+		{
+			System.out.print(" + ");
+			System.out.print(" - ");
+			System.out.print(" * ");
+			System.out.print(" / ");
+			System.out.print(" % ");
+			System.out.print(" C ");
+			System.out.print(" X ");
+			System.out.println();
+			switch (sc.next().charAt(0))
+			{
+				case '+':
+				{
+					System.out.println("Enter the number");
+					Calci.add(sc.nextInt());
+					System.out.println(Calci.value);
+					break;
+				}
+				case '-':
+				{
+					System.out.println("Enter the number");
+					Calci.sub(sc.nextInt());
+					System.out.println(Calci.value);
+					break;
+				}
+				case '*':
+				{
+					System.out.println("Enter the number");
+					Calci.mul(sc.nextInt());
+					System.out.println(Calci.value);
+					break;
+				}
+				case '/':
+				{
+					System.out.println("Enter the number");
+					Calci.div(sc.nextInt());
+					System.out.println(Calci.value);
+					break;
+				}
+				case '%':
+				{
+					System.out.println("Enter the number");
+					Calci.mod(sc.nextInt());
+					System.out.println(Calci.value);
+					break;
+				}
+				case 'C':
+				{
+					Calci.value=0;
+					System.out.println(Calci.value);
+					break;
+				}
+				case 'X':
+				{
+					b=true;
+					break;
+				}
+			}
+			
+		}
+	}
+}

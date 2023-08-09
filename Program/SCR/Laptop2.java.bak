@@ -1,0 +1,10 @@
+class Laptop2
+{
+	String name;
+	double price;
+	Laptop2(String name,double price)
+	{
+		this.name=name;
+		this.price=price;
+	}
+}

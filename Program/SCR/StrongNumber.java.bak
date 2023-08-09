@@ -1,0 +1,18 @@
+import java.util.Scanner;
+class StrongNumber 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the num");
+		int ip=sc.nextInt();
+		if (ip==Methods.sum(ip))
+		{
+			System.out.println("Strong number");
+		}
+		else
+		{
+			System.out.println("not a Strong number");
+		}
+	}
+}

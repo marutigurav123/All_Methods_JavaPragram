@@ -1,0 +1,55 @@
+import java.util.Scanner;
+class Laptop1 
+{
+	String name;
+	String color;
+	double price;
+	Scanner sc=new Scanner(System.in);
+	Laptop1()
+	{
+		
+	}
+	{
+		System.out.println("name");
+		name=sc.nextLine();
+		System.out.println("color");
+		color=sc.nextLine();
+		System.out.println("price");
+		price=sc.nextInt();
+	}
+	public void display()
+	{
+		System.out.println("name : "+name);
+		System.out.println("color : "+color);
+		System.out.println("price : "+price);
+	}
+	public static void main(String[] args) 
+	{
+		Laptop1 c1=new Laptop1();
+		Laptop1 c2=new Laptop1();
+		Laptop1 c3=new Laptop1();
+		Laptop1 c4=new Laptop1();
+		Laptop1 c5=new Laptop1();
+		if (c1.price>=10000)
+		{
+			c1.display();
+		}
+		if (c2.price>=10000)
+		{
+			c2.display();
+		}
+		if (c3.price>=10000)
+		{
+			c3.display();
+		}
+		if (c4.price>=10000)
+		{
+			c4.display();
+		}
+		if (c5.price>=10000)
+		{
+			c5.display();
+		}
+
+	}	
+}

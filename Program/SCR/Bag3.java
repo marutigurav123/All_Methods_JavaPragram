@@ -1,0 +1,107 @@
+import java.util.Scanner;
+class Bag3  
+{
+	Laptop2 l;
+	Book1 b;
+	Scanner sc=new Scanner(System.in);
+	public void add()
+	{
+		if (l==null&&b==null)
+		{
+			System.out.println("1.Laptop 2.Book");
+			switch (sc.nextInt())
+			{
+			case 1:
+				{
+					System.out.println("Enter laptop name");
+					sc.nextLine();
+					String name=sc.nextLine();
+					System.out.println("Enter laptop price");
+					double price=sc.nextDouble();
+					l=new Laptop2(name,price);
+					System.out.println("Laptop is stored");
+					break;
+				}
+			case 2:
+				{
+					System.out.println("Enter book name");
+					sc.nextLine();
+					String name=sc.nextLine();
+					System.out.println("Enter book price");
+					double price=sc.nextDouble();
+					b=new Book1(name,price);
+					System.out.println("Book is stored");
+					break;
+				}
+			}
+		}
+		else
+		{
+			System.out.println("bag is full");
+		}
+	}
+	public void remove()
+	{
+		if (l==null&&b==null)
+		{
+			System.out.println("Bag is empty");
+		}
+		else if (l!=null)
+		{
+			l=null;
+			System.out.println("Laptop is removed");
+		}
+		else if (b!=null)
+		{
+			b=null;
+			System.out.println("Book is removed");
+		}
+	}
+	public void display()
+	{
+		if (l==null&&b==null)
+		{
+			System.out.println("Bag is empty");
+		}
+		else if (l!=null)
+		{
+			System.out.println("Laptop name : "+l.name);
+			System.out.println("Price : "+l.price);
+		}
+		else if (b!=null)
+		{
+			System.out.println("Book name : "+b.name);
+			System.out.println("Price : "+b.price);
+		}
+	}
+	public static void main(String[] args) 
+	{
+		Bag3 a=new Bag3();
+		for (; ; )
+		{
+			System.out.println("1.add 2.remove 3.display 4.exit");
+			switch (a.sc.nextInt())
+			{
+			case 1:
+				{
+					a.add();
+					break;
+				}
+			case 2:
+				{
+					a.remove();
+					break;
+				}
+			case 3:
+				{
+					a.display();
+					break;
+				}
+			case 4:
+				{
+					System.exit(0);
+				}
+			}
+		}
+	}
+}

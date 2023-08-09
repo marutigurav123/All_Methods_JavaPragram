@@ -1,0 +1,25 @@
+import java.util.Scanner;
+class AcDriver 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		Ac a1=new Ac();
+		Ac1.brand="LLyod";
+		Ac1.price=50000.0;
+		Ac1.capacity=1.5;
+		Ac1.minTemp=14;
+		Ac1.maxTemp=28;
+		Ac1.ambientTemp=19;
+		System.out.println("1.Specification 2.Temprature");
+		int ip=sc.nextInt();
+		if (ip==1)
+		{
+			A1.displayAc();
+		}
+		if (ip==2)
+		{
+			A1.displayAcTemp();
+		}
+	}
+}

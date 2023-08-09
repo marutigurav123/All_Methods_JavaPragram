@@ -1,0 +1,38 @@
+import java.util.Scanner;
+class PenDriver 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		Pen p1=new Pen();
+		System.out.println("name");
+		p1.name=sc.nextLine();
+
+		sc.nextLine();
+				System.out.println("color");
+		p1.color=sc.nextLine();
+		System.out.println("price");
+		p1.price=sc.nextInt();
+		p1.displayPen();
+
+		Pen p2=new Pen();
+		System.out.println("name");
+		p2.name=sc.nextLine();
+		System.out.println("color");
+		sc.nextLine();
+		p2.color=sc.nextLine();
+		System.out.println("price");
+		p2.price=sc.nextInt();
+		p2.displayPen();
+
+		Pen p3=new Pen();
+		System.out.println("name");
+		p3.name=sc.nextLine();
+		System.out.println("color");
+		sc.nextLine();
+		p3.color=sc.nextLine();
+		System.out.println("price");
+		p3.price=sc.nextInt();
+		p3.displayPen();
+	}
+}

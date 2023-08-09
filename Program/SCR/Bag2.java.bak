@@ -1,0 +1,109 @@
+import java.util.Scanner;
+class Bag2 
+{
+	Laptop2 l;
+	Pen1 p;
+	Scanner sc=new Scanner(System.in);
+	public void add()
+	{
+		if (l==null&&p==null)
+		{
+			System.out.println("1.Laptop 2.Pen");
+			switch (sc.nextInt())
+			{
+			case 1:
+				{
+						System.out.println("Enter laptop name");
+						String name=sc.next();
+						System.out.println("Enter laptop price");
+						double price=sc.nextDouble();
+						l=new Laptop2(name,price);
+						System.out.println("Laptop is stored");
+					
+					break;
+				}
+			case 2:
+				{
+					System.out.println("Enter pen name");
+					String name=sc.next();
+					System.out.println("Enter pen color");
+					String color=sc.next();
+					System.out.println("Enter laptop price");
+					double price=sc.nextDouble();
+					p=new Pen1(name,color,price);
+					System.out.println("Pen is stored");
+					break;
+				}
+			}
+		}
+		else
+		{
+			System.out.println("bag full");
+		}
+	}
+	public void remove()
+	{
+		if (p!=null)
+		{
+			p=null;
+			System.out.println("Pen is removed");
+		}
+		else if (l!=null)
+		{
+			l=null;
+			System.out.println("Laptop is removed");
+		}
+		else
+		{
+			System.out.println("Bag is empty");
+		}
+	}
+	public void display()
+	{
+		if (p==null&&l==null)
+		{
+			System.out.println("add an item");
+		}
+		else if (p!=null)
+		{
+			System.out.println(p.name);
+			System.out.println(p.color);
+			System.out.println(p.price);
+		}
+		else if (l!=null)
+		{
+			System.out.println(l.name);
+			System.out.println(l.price);
+		}
+	}
+	public static void main(String[] args) 
+	{
+		Bag2 b=new Bag2();
+		for (; ; )
+		{
+			System.out.println("1.add 2.remove 3.display 4.exit");
+			switch (b.sc.nextInt())
+			{
+				case 1:
+					{
+						b.add();
+						break;
+					}
+				case 2:
+					{
+						b.remove();
+						break;
+					}
+				case 3:
+					{
+						b.display();
+						break;
+					}
+				case 4:
+					{
+						System.exit(0);
+					}
+			}
+		}
+	}
+}
