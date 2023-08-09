@@ -1,0 +1,39 @@
+import java.util.Scanner;
+class Method2 
+{
+	public static boolean isPrime(int a)
+	{
+		for (int i=2;i<=a/2 ;i++ )
+		{
+			if (a%i==0)
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter starting number");
+		int start=sc.nextInt();
+		System.out.println("Enter ending number");
+		int end=sc.nextInt();
+		for (;start++<=end ; )
+		{
+			if (isPrime(start))
+			{
+				System.out.println(start+" = "+"prime number");
+				break;
+			}
+		}
+		for (;end-->=start ;)
+		{
+			if (isPrime(end))
+			{
+				System.out.println(end+" = "+"prime number");
+				break;
+			}
+		}
+	}
+}

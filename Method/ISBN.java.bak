@@ -1,0 +1,36 @@
+import java.util.Scanner;
+class ISBN 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the number");
+		long num=sc.nextLong();
+		if (num%10==4||num%10==7)
+		{
+			if (m1(num)%11==0)
+			{
+				System.out.println("Its an ISBN number");
+			}
+			else
+			{
+				System.out.println("Its not an ISBN number");
+			}
+		}
+		else
+		{
+			System.out.println("Its not an ISBN number");
+		}
+
+	}
+	public static long m1(long a)
+	{
+		long sum=0;
+		long x=1;
+		for (long i=a;i>0;i/=10 )
+		{
+			sum=sum+((i%10)*x++);
+		}
+		return sum;
+	}
+}
